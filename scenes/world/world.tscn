@@ -1,5 +1,19 @@
-[gd_scene format=3 uid="uid://bbqpaoc8ynubk"]
+[gd_scene load_steps=2 format=3 uid="uid://bbqpaoc8ynubk"]
+
+[ext_resource type="Script" path="res://scenes/world/world.gd" id="1_8gjf8"]
 
 [node name="World" type="Node2D"]
+script = ExtResource("1_8gjf8")
 
 [node name="Background" type="Sprite2D" parent="."]
+
+[node name="TestPath" type="Path2D" parent="."]
+
+[node name="PathFollow2D" type="PathFollow2D" parent="TestPath"]
+position = Vector2(-565, 653)
+rotation = -2.11073
+
+[node name="Sprite2D" type="Sprite2D" parent="TestPath/PathFollow2D"]
+
+[node name="Mapview" type="Camera2D" parent="."]
+zoom = Vector2(0.5, 0.5)
